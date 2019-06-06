@@ -9,7 +9,7 @@
 #notas          :Install Nano and Emacs para usar el Script
 #bash_version   :4.1.5(1)-version
 #e-mail         :3ln1pr1(Arroba)keemail(dot)me
-#Empresa        :
+#Empresa        :https://3ln1pr1.github.io/Bitacora/
 #Telefono       :@3ln1pr1 (Telegram) @3l_n1 (Twitter)  3ln1pr1@mastodon.social  @3ln1pr1 en GNUsocial(https://is.gd/lPELkX)
 #
 #                      ██████╗ ██╗     ███╗   ██╗ ██╗██████╗ ██████╗  ██╗
@@ -19,7 +19,7 @@
 #                      ██████╔╝███████╗██║ ╚████║ ██║██║     ██║  ██║ ██║
 #                      ╚═════╝ ╚══════╝╚═╝  ╚═══╝ ╚═╝╚═╝     ╚═╝  ╚═╝ ╚═╝
 #                                    -----------------------
-#                                      3ln1pr1&keemail.me
+#                             https://3ln1pr1.github.io/Bitacora/
 #===3=====l======N=======1=========P=======r========1======@===3=====l======N=======1=========P=======r========1======@
 
 echo "Este script limpia tu sistema y la swap"
