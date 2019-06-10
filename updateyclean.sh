@@ -1,15 +1,15 @@
 #!/bin/bash -   
-#Titulo         :prueba2222.sh
-#Descripción   :Prueba 222 de creascript
-#Autor          :3lN1Pr1
-#Fecha          :2019-05-28
-#Versión       :2      
-#uso            :./prueba2222.sh
+#Titulo         :updateyclean.sh
+#Descripción   :Script para actualizar y limpiar el sistema automaticamnete
+#Autor          :3ln1pr1
+#Fecha          :2018-11-10
+#Versión       :0.1    
+#uso            :./updateyclean.sh
 #Notas          :       
 #bash_version   :4.4.19(1)-release
-#E-mail         :nombre@servidor.com
-#Empresa        :NOMBRE DE LA EMPRESA
-#Telefono       :666 999 999
+#E-mail         :3ln1pr1[at]keemail[dot]me
+#Empresa        :
+#Telefono       :@3ln1pr1 (redes Sociales) @E3ln1pr1 (En Telegram)
 ##===3=====l======N=======1=========P=======r========1======@===3=====l======N=======1=========P=======r========1======@
 
 #============================================================================
@@ -36,20 +36,28 @@ VARIABLE_EJEMPLO='valor de ejemplo'
 #============================================================================
 
 # Aqui iniciamos el Codigo.
-# Ejemplo de Mostrar resultados de Variables como Ejemplo.
-
-:<<-! # ESTE CODIGO ESTA COMENTADO PARA MOSTRAR LA SINTAXIS DE COMO DEBEN MOSTRARSE LAS VARIABLES.
-echo $FECHA
-echo $HORA
-echo $USERID
-echo $IP
-echo $IP2
-echo $VARIABLE_EJEMPLO
-!
-                        
-
- :<<-! # ESTE CODIGO ESTA COMENTADO PARA MOSTRAR LA VARIABLES HEREDADAS DEL ARCHIVO /home/informatico/scripts/variables.sh
-Amarillo_Azul_Azulclaro_Blanco_CABINA_Cyan_Cyanclaro_FOLDER1_Grisclaro_Grisoscuro_HAB9_HABSTART_INDICE_LIMIT_Marron_nc_Negro_Purpura_Purpuraclaro_Rojo_Rojoclaro_ROMCAB_ROOTSCRIPT_SALIDA_URL1_Verde_Verdeclaro_
+ :<<-! # ESTE CODIGO ESTA COMENTADO PARA MOSTRAR LA VARIABLES HEREDADAS DEL ARCHIVO ~/scripts/variables.sh
+Amarillo_Azul_Azulclaro_Blanco_Cyan_Cyanclaro_FOLDER1_Grisclaro_Grisoscuro_Marron_nc_Negro_Purpura_Purpuraclaro_Rojo_Rojoclaro_ROOTSCRIPT_URL_URL1_VAR_VAR1_VAR2_Verde_Verdeclaro_
  #-----(↑)----(↑)------(↑)-------- HASTA AQUÍ LAS VARIABLES HEREDADAS ----(↑)------(↑)-----(↑)-------
 !
-echo Finalizado........
+FICHERO=/usr/bin/updateyclean
+
+if [ -f $FICHERO ]
+then
+   echo "El fichero $FICHERO existe en comandos puedes invocarlo directamente $updateyclean"
+else
+	sudo ln -f updateyclean.sh /usr/bin/updateyclean
+   echo -e "El fichero $FICHERO no existe. ${Verde}SE CREA ${nc} en comandos puedes invocarlo directamente la proxima vez '${Azulclaro}updateyclean${nc}' "
+fi 
+
+
+
+echo -e "${Azulclaro}EMPEZANDO ACTUALIZACION DEL SISTEMA en ${Rojo}3${Azulclaro} segundos"
+sleep 3
+sudo apt update && sudo apt upgrade && sudo apt full-upgrade
+
+echo -e "${Rojoclaro} EMPEZANDO LIMPIEZA DEL SISTEMA"
+sudo apt clean && sudo apt autoclean && sudo apt autoremove
+echo -e ""
+echo -e "${Verdeclaro} Actualización y limpieza Correcta ${nc}"
+echo ""
