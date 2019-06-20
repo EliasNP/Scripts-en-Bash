@@ -1,0 +1,1 @@
+*/1 * * * * root find /var/spool/asterisk/outgoing/*  -mtime +1 -type f -exec mv {} /root/despertador/ \;
