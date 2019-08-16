@@ -1,0 +1,24 @@
+[fusiondirectory]
+name=Fusiondirectory Packages for RHEL / CentOS 6
+baseurl=http://repos.fusiondirectory.org/fusiondirectory-current/rhel6/RPMS/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-FUSIONDIRECTORY
+
+[fusiondirectory-extra]
+name=Fusiondirectory Extra Packages for RHEL / CentOS 6
+baseurl=http://repos.fusiondirectory.org/fusiondirectory-extra/rhel6/RPMS/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-FUSIONDIRECTORY
+
+# SRPMS are also available in the following repo :
+
+# [fusiondirectory-src]
+# name=Fusiondirectory Packages for RHEL / CentOS 6
+# baseurl=http://repos.fusiondirectory.org/fusiondirectory-current/rhel6/SRPMS/
+# enabled=1
+# gpgcheck=1
+# gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-FUSIONDIRECTORY
+
+

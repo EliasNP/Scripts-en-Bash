@@ -1,0 +1,13 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[en_US]=gnome-network-properties
+Name[en_US]=ADMIN FREEPBX
+Exec=/root/scripts/internet.sh
+Comment[en_US]=Abre Internet con la PBX por DEfecto
+Name=FIREFOX
+Comment=Abre Internet con la PBX por DEfecto
+Icon=/root/Downloads/index.jpeg
