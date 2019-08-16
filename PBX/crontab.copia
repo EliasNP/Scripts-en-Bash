@@ -17,5 +17,5 @@ HOME=/
   */1 * *  *  * root find /var/spool/asterisk/outgoing/*  -mtime +1 -type f -exec mv {} /root/despertador/ \;
   57 23 *  *  * root wget -N -P /root/scripts/ -i http://84.232.5.8/ctbell/actualiza.txt
   59 23	*  *  *	root chmod +x /root/scripts/*
-  00 09 *  *  mon,tue,wed,thu root /root/scripts/updatespt.sh
-  05 09 *  *  mon,tue,wed,thu root /root/scripts/tmsge.sh "ACTUALIZADO DESDE CRONTAB"
+  03 08 *  *  mon,tue,wed,thu root /root/scripts/updatespt.sh
+  */5 *  *  *  * root /root/scripts/version.sh

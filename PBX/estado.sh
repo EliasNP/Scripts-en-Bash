@@ -3,7 +3,7 @@
 #descripcion    :Este Script muestra un menú rapido para manejar opciones con las centralitas.
 #autor	        :Elias Nieva Prieto
 #fecha          :2019-05-27
-#version        :0.4
+#version        :0.6
 #uso		    :sh estado.sh
 #notas          :Install Nano and Emacs para usar el Script
 #bash_version   :4.1.5(1)-version

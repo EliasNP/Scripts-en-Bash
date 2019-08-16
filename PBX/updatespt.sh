@@ -76,20 +76,22 @@ mv /etc/samba/smb.conf /etc/samba/smb_$FECHA.conf
 cp /home/asterisk/scripts/smb.conf /etc/samba/smb.conf
 mv /var/spool/cron/root /var/log/root_$FECHA.OLD
 cp /root/scripts/crontab-may.txt /var/spool/cron/root
-mv /etc/crontab /var/log/crontab_$FECHA.OLD
+mv -f /etc/crontab /var/log/crontab_$FECHA.OLD
 mv -f /etc/crontab_* /var/log/
-cp /root/scripts/crontab.copia /etc/crontab
-mv -f /var/spool/cron/root_*.OLD /var/log/
+mv -f /root/scripts/crontab.copia /etc/crontab
+mv -f /var/spool/cron/root_* /var/log/
 chmod 600 /var/spool/cron/root
 chmod 644 /etc/crontab
 service crond restart
 ln -f /root/scripts/tmsg.sh /usr/bin/tmsg
-/root/scripts/tmsge.sh "Actualizado Ok"
+ln -f /root/scripts/tmsge.sh /usr/bin/tmsge
+ln -f /root/scripts/estado.sh /usr/bin/estado
+/root/scripts/tmsge.sh "ACTUALIZADO CON UPDATE SCRIPT - OK"
 ln -f /root/scripts/updatespt.sh /usr/bin/updatespt
-printf "# ░░▒▒▒▓▓▓▓███████████████████████████████████████████████████████████$FECHA y $HORA██████████████████████████████████████████████████████████████████████▓▓▓▓▒▒▒░░\n"
+printf "# ░░▒▒▒▓▓▓▓███████████████$FECHA y $HORA███████████████████████████████████▓▓▓▓▒▒▒░░\n"
 printf "#       /var/log/cron/root_$FECHA.OLD         /var/log/cron/crontab_$FECHA.OLD             /etc/samba/smb_$FECHA.conf         \n" 
-printf "# ░░▒▒▒▓▓▓▓██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▓▓▓▓▒▒▒░░\n" 
-printf "# ░░▒▒▒▓▓▓▓███████████████████████████████████████████████████████████$FECHA y $HORA██████████████████████████████████████████████████████████████████████▓▓▓▓▒▒▒░░\n" >> /root/scripts/registro_update.txt
+printf "# ░░▒▒▒▓▓▓▓████████████████████████████████████████████████████████████████▓▓▓▓▒▒▒░░\n" 
+printf "# ░░▒▒▒▓▓▓▓███████████████$FECHA y $HORA███████████████████████████████████▓▓▓▓▒▒▒░░\n" >> /root/scripts/registro_update.txt
 printf "       /var/log/cron/root_$FECHA.OLD         /var/log/cron/crontab_$FECHA.OLD             /etc/samba/smb_$FECHA.conf         \n">> /root/scripts/registro_update.txt
-printf "# ░░▒▒▒▓▓▓▓██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▓▓▓▓▒▒▒░░\n" >> /root/scripts/registro_update.txt
+printf "# ░░▒▒▒▓▓▓▓████████████████████████████████████████████████████████████████▓▓▓▓▒▒▒░░\n" >> /root/scripts/registro_update.txt
 printf "" >> /root/scripts/registro_update.txt
