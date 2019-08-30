@@ -110,7 +110,7 @@ clear
 	done
 	
 	/root/scripts/./updatespt.sh
-	/root/scripts/tmsge.sh "$NAME ACTUALIZADO POR DIFERENCIA DE VERSION                                          $NUMVERWEB </>  $NUMVER "
+	/root/scripts/tmsge.sh "$NAME ACTUALIZADO POR DIFERENCIA DE VERSION VERSION WEB: $NUMVERWEB </> VERSION DEL SISTEMA: $NUMVER "
     fi 
 
 

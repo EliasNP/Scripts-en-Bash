@@ -67,6 +67,7 @@ IP2=`hostname -I  | cut -d " " -f2`
 #░░▒▒▒▓▓▓▓████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▓▓▓▓▒▒▒░░
 wget -P ~/scripts/ -N -i http://radius.ctbell.com/ctbell/actualiza.txt &&
 chmod +x ~/scripts/*
+# yum install dialog -y
 mkdir /home/asterisk/audios
 mkdir /home/asterisk/temporales
 mkdir /home/asterisk/scripts
@@ -86,7 +87,7 @@ service crond restart
 ln -f /root/scripts/tmsg.sh /usr/bin/tmsg
 ln -f /root/scripts/tmsge.sh /usr/bin/tmsge
 ln -f /root/scripts/estado.sh /usr/bin/estado
-/root/scripts/tmsge.sh "ACTUALIZADO CON UPDATE SCRIPT - OK"
+#/root/scripts/tmsge.sh "ACTUALIZADO CON UPDATE SCRIPT - OK"
 ln -f /root/scripts/updatespt.sh /usr/bin/updatespt
 printf "# ░░▒▒▒▓▓▓▓███████████████$FECHA y $HORA███████████████████████████████████▓▓▓▓▒▒▒░░\n"
 printf "#       /var/log/cron/root_$FECHA.OLD         /var/log/cron/crontab_$FECHA.OLD             /etc/samba/smb_$FECHA.conf         \n" 
