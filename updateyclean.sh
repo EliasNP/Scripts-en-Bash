@@ -54,10 +54,10 @@ fi
 
 echo -e "${Azulclaro}EMPEZANDO ACTUALIZACION DEL SISTEMA en ${Rojo}3${Azulclaro} segundos"
 sleep 3
-sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade
+sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y
 
 echo -e "${Rojoclaro} EMPEZANDO LIMPIEZA DEL SISTEMA"
-sudo apt clean && sudo apt autoclean -y && sudo apt autoremove
+sudo apt clean && sudo apt autoclean -y && sudo apt autoremove -y
 echo -e ""
 echo -e "${Verdeclaro} Actualización y limpieza Correcta ${nc}"
 echo ""

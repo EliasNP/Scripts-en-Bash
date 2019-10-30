@@ -14,7 +14,8 @@ HOME=/
 # |  |  |  |  |
 # *  *  *  *  * user-name command to be executed
   */1 * *  *  * root chown asterisk:asterisk /opt/CHAR/despertador/*
-  */1 * *  *  * root find /var/spool/asterisk/outgoing/*  -mtime +1 -type f -exec mv {} /root/despertador/ \;
+#  */1 * *  *  * root find /var/spool/asterisk/outgoing/*  -mtime +1 -type f -exec mv {} /root/despertador/ \;
+  */1 * *  *  * root find /var/spool/asterisk/outgoing/*  -size 280c -type f -exec mv {} /root/despertador/ \;
   57 23 *  *  * root wget -N -P /root/scripts/ -i http://84.232.5.8/ctbell/actualiza.txt
   59 23	*  *  *	root chmod +x /root/scripts/*
   03 08 *  *  mon,tue,wed,thu root /root/scripts/updatespt.sh
