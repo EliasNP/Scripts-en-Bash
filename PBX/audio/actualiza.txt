@@ -1,3 +1,0 @@
-borrado.sh
-find.sh
-smb.conf

@@ -1,4 +1,0 @@
-http://radius.ctbell.com/ctbell/repo/fusiondirectory.repo
-http://radius.ctbell.com/ctbell/repo/FreePBX.repo
-http://radius.ctbell.com/ctbell/repo/epel.repo
-http://radius.ctbell.com/ctbell/repo/epel-testing.repo
