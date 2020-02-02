@@ -26,3 +26,4 @@ timg.sh
 tmsg.sh
 variables.sh
 webldap.sh
+mysqlins.sh
