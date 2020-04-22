@@ -1,12 +1,12 @@
 #!/bin/bash -   
-#Titulo         :gitpush.sh
-#Descripción   :Comando facil para actualizar repositorio git
-#Autor          :3ln1r1 
-#Fecha          :2019-06-20
-#Versión       :0.0.1  
-#uso            :./gitpush.sh
+#Titulo         :post.sh
+#Descripción   :Scipt para crear Post en el Blog de EliasNieva
+#Autor          :Elias Nieva
+#Fecha          :2020-04-14
+#Versión       :A.0.1  
+#uso            :./post.sh
 #Notas          :       
-#bash_version   :4.4.19(1)-release
+#bash_version   :4.4.20(1)-release
 #E-mail         :informatica@ctbell.com
 #Empresa        :C.T.Bell s.l.u
 #Telefono       :966 812 131
@@ -17,8 +17,8 @@
 #============================================================================
 
 # Variables Genericas cargadas desde el Script 'Variables.sh'
-# VARIABLE=~/scripts/variables.sh
-# source $VARIABLE
+VARIABLE=~/scripts/variables.sh
+source $VARIABLE
 
 #============================================================================
 #                      DEFINICION DE VARIABLES PROPIAS                      #
@@ -38,24 +38,17 @@ VARIABLE_EJEMPLO='valor de ejemplo'
 # Aqui iniciamos el Codigo.
 # Ejemplo de Mostrar resultados de Variables como Ejemplo.
 
-echo
-
-: 'COMENTARIO1 ESTE CODIGO ESTA COMENTADO PARA MOSTRAR LA SINTAXIS DE COMO DEBEN MOSTRARSE LAS VARIABLES.
+:<<-! # ESTE CODIGO ESTA COMENTADO PARA MOSTRAR LA SINTAXIS DE COMO DEBEN MOSTRARSE LAS VARIABLES.
 echo $FECHA
 echo $HORA
 echo $USERID
 echo $IP
 echo $IP2
 echo $VARIABLE_EJEMPLO
-' 
+!
                         
 
-: ' COMENTARIO2  ESTE CODIGO ESTA COMENTADO PARA MOSTRAR LA VARIABLES HEREDADAS DEL ARCHIVO /home/informatico/scripts/variables.sh
+ :<<-! # ESTE CODIGO ESTA COMENTADO PARA MOSTRAR LA VARIABLES HEREDADAS DEL ARCHIVO /home/enieva/scripts/variables.sh
 
  #-----(↑)----(↑)------(↑)-------- HASTA AQUÍ LAS VARIABLES HEREDADAS ----(↑)------(↑)-----(↑)-------
-COMENTARIO2 ' 
-
-echo "Cual va a ser el Texto del \"Commit\""
-read COMMIT
-
-git add . ; git commit -m "$COMMIT" ; git push
+!
