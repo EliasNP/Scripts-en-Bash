@@ -56,4 +56,4 @@ COMENTARIO2 '
 echo "Cual va a ser el Texto del \"Commit\""
 read COMMIT
 
-git add . ; git commit -m "$COMMIT" ; git push
+git add . ; git commit -m "$COMMIT" ; git push -u master origin 
