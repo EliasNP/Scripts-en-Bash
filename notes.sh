@@ -100,10 +100,22 @@ _Busca_Nota(){
 	nano ${arr[$a_Editar]} ; clear
 	}
 
+_git_push(){
+
+	echo -e "${Azul} Empezamos añadiendo los Ficheros a subir ${nc} "
+	git add .
+	echo -e " ${Verde} Descargamos lo que pueda haber en el repositorio ${nc} "
+	git pull
+	echo "Cual va a ser el Texto del \"Commit\""
+	read COMMIT
+	git commit -m "$COMMIT" ; git push
+
+}
+
 _select_editor(){
 
     # Imprimimos por pantalla las opciones a seleccionar
-    printf "%s\n%s\n%s\n%s\n\n" "Seleciona una opción." "1 Lista Notas." "2 Crea Nota." "3 Busca x Texto."
+    printf "%s\n%s\n%s\n%s\n%s\n\n" "Seleciona una opción." "1 Lista Notas." "2 Crea Nota." "3 Busca x Texto." "Actualiza Repositorio"
     read -r editor
 
     # Elegimos la opcion y ejecutamos su codigo
@@ -114,6 +126,8 @@ _select_editor(){
             ;;
         3) _Busca_Nota 
             ;;
+        4) _git_push
+			;;
         *) /usr/bin/clear
            printf "%s\n%s\n\n" "No he entendido la seleccion." \
                "Presiona <Ctrl-c> para Salir."
