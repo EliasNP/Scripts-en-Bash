@@ -53,7 +53,12 @@ echo $VARIABLE_EJEMPLO
  #-----(↑)----(↑)------(↑)-------- HASTA AQUÍ LAS VARIABLES HEREDADAS ----(↑)------(↑)-----(↑)-------
 COMENTARIO2 '  
 
+echo -e "${Azul} Empezamos añadiendo los Ficheros a subir ${nc} "
+git add .
+echo -e " ${Verde} Descargamos lo que pueda haber en el repositorio ${nc} "
+git pull
+
 echo "Cual va a ser el Texto del \"Commit\""
 read COMMIT
 
-git add . ; git commit -m "$COMMIT" ; git push -u master origin 
+git commit -m "$COMMIT" ; git push
